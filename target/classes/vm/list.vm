@@ -1,0 +1,16 @@
+<HTML>
+<BODY>
+
+ #foreach($ppp in $list)
+ <table>
+  idx: $ppp.idx
+  id : $ppp.id
+  pw : $ppp.pw
+name : $ppp.name
+update : $ppp.update
+question :　$ppp.question
+writer : $ppp.writer
+ #end
+ </table>
+</body>
+</html>

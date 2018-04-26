@@ -1,0 +1,14 @@
+<html>
+<body>
+	#sform("action=questionAction" "method=post")
+	    #stextfield ("label=idx" "name=bean.idx")<br/>
+	    #stextfield ("label=id" "name=bean.id")<br/>
+	    #stextfield ("label=name" "name=bean.name")<br/>
+	    #stextfield ("label=pw" "name=bean.pw")<br/>
+	    #stextfield ("label=question" "name=bean.question")<br/>
+	    #stextfield ("label=update" "name=bean.update")<br/>
+	    #stextfield ("label=writer" "name=bean.writer")<br/>
+	    #ssubmit ("value=Update")
+	#end
+</body>
+</html>

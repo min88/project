@@ -1,0 +1,16 @@
+
+
+<HTML>
+<BODY>
+	#sform("action=listAction")
+    $bean.idx<br/>
+    $bean.id<br/>
+    $bean.name<br/>
+    $bean.pw<br/>
+    $bean.question<br/>
+    $bean.update<br/>
+	$bean.writer<br/>
+    #ssubmit ("value=ssss")
+#end
+</body>
+</html>

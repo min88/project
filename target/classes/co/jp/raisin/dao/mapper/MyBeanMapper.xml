@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="co.jp.raisin.dao.mapper.MyBeanMapper" >
+ <!--
+ <resultMap id="EmpResult" type="com.ziqoo.mybatisSample.entity.Emp" >
+   <result column="user_id" property="userId" />
+   <result column="user_name" property="userName"/>
+ </resultMap>
+ -->
+
+ <insert id="insert" parameterType="co.jp.raisin.bean.MyBean" >
+ INSERT INTO raisin.question(
+            idx, id, name, pw, question, update, writer)
+    VALUES (#{idx,jdbcType=INTEGER}, #{id,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{pw,jdbcType=VARCHAR},
+     #{question,jdbcType=VARCHAR}, current_timestamp, #{writer,jdbcType=VARCHAR});
+
+ </insert>
+ <select id="select"  resultType="co.jp.raisin.bean.MyBean" >
+ SELECT * FROM raisin.question;
+ </select>
+</mapper>

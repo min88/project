@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+    <constant name="struts.devMode" value="true"/>
+
+    <package name="default" namespace="/" extends="struts-default">
+
+        <default-action-ref name="index"/>
+
+        <action name="beanAction"  class="co.jp.raisin.action.BeanAction">
+            <result name="input" type="velocity">/vm/question.vm</result>
+            <result name="success"  type="velocity">/vm/question.vm</result>
+        </action>
+
+        <action name="questionAction"  class="co.jp.raisin.action.QuestionAction">
+            <result name="input" type="velocity">/vm/question.vm</result>
+            <result name="success"  type="velocity">/vm/answer.vm</result>
+        </action>
+
+		 <action name="listAction"  class="co.jp.raisin.action.ListAction">
+            <result name="input" type="velocity">/vm/list.vm</result>
+            <result name="success"  type="velocity">/vm/list.vm</result>
+        </action>
+    </package>
+
+    <!-- Add addition packages and configuration here. -->
+</struts>
